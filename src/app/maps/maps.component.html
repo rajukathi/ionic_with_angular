@@ -1,0 +1,56 @@
+<ion-app>
+  <ion-menu contentId="main-content">
+    <ion-header>
+      <ion-toolbar class="ion-padding">
+        <ion-icon name="bookmark-outline" slot="start"></ion-icon>
+        <ion-title>
+          Pages  
+        </ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content class="ion-padding">
+        <ion-menu-toggle auto-hide="true">  
+          <ion-item [routerLink]="['/maps/goal-first']" routerDirection="forward">  
+            <ion-icon name="bookmark-outline" slot="start"></ion-icon>  
+              goal-1
+          </ion-item>  
+          <ion-item [routerLink]="['/maps/goal-second']" routerDirection="forward">  
+            <ion-icon name="bookmark-outline" slot="start"></ion-icon>  
+              goal-2 
+          </ion-item>  
+          <ion-item [routerLink]="['/maps/goal-third']" routerDirection="forward">  
+            <ion-icon name="bookmark-outline" slot="start"></ion-icon>  
+              goal-3
+          </ion-item>  
+          <ion-item [routerLink]="['/maps/goal-fourth']" routerDirection="forward">  
+            <ion-icon name="bookmark-outline" slot="start"></ion-icon>  
+              goal-4  
+          </ion-item>
+          <ion-item >  
+            <ion-icon name="bookmark-outline" slot="start"></ion-icon>  
+              <ion-button (click)="logout()">Logout</ion-button>
+          </ion-item>  
+        </ion-menu-toggle>
+    </ion-content>
+  </ion-menu>
+
+  <ion-content id="main-content"> 
+    <ion-header>
+      <ion-toolbar color="primary">
+        <ion-buttons slot="start">
+          <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+        <ion-title class="ion-text-center">Live Traking</ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content class="ion-padding"> 
+      <ion-router-outlet></ion-router-outlet>  
+    </ion-content>
+    <ion-footer>
+      <ion-toolbar color="primary">
+        <ion-title class="ion-text-center">Copyright by Raju Kathi</ion-title>
+      </ion-toolbar>
+    </ion-footer>
+  </ion-content>
+
+</ion-app>
