@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  apiUrl: 'https://connect.paj-gps.de/api/v1/', //api url comes herer
+  apiUrl: '', //api url comes herer
 };
 
 /*
