@@ -24,10 +24,7 @@ export class AppComponent implements OnInit {
 
     ngOnInit() {
         this.dataService.isUserSessionActive.subscribe((data:any) => {
-            console.log("inside app");
-            console.log(data);
-            this.isLogin = data;            
-            console.log(this.isLogin);
+            this.isLogin = data;
             if(this.isLogin === false) {
                 this.router.navigateByUrl('/login');
             } else {

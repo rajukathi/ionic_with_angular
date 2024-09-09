@@ -37,7 +37,7 @@
   <ion-content id="main-content"> 
     <ion-header>
       <ion-toolbar color="primary">
-        <ion-buttons slot="start">
+        <ion-buttons slot="start" *ngIf="isLogin == true">
           <ion-menu-button></ion-menu-button>
         </ion-buttons>
         <ion-title class="ion-text-center">Live Traking</ion-title>
