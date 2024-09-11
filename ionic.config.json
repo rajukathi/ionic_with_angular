@@ -1,7 +1,0 @@
-{
-  "name": "prac",
-  "integrations": {
-    "capacitor": {}
-  },
-  "type": "angular"
-}
