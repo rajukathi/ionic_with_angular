@@ -12,11 +12,20 @@ export class LoginFormComponent  implements OnInit {
 
   username:any;
   password:any;
+  public isLogin:boolean = false;
 
   constructor(private dataService: DataService,public loadingController: LoadingController, private toastController: ToastController,private router: Router) { 
   }
 
   ngOnInit(){
+    this.dataService.isUserSessionActive.subscribe((data:any) => {
+        this.isLogin = data;
+        if(this.isLogin === false) {
+            this.router.navigateByUrl('/login');
+        } else {
+            this.router.navigateByUrl('/maps/goal-first');
+        }
+    });
   }
 
   async signIn() {

@@ -20,17 +20,11 @@ export class DataService {
   }
 
   getData(endPoint:any): Observable<any> {
-    console.log("getData");
-    console.log(this.apiUrl+endPoint);
-    console.log(this.authToken);
     let header = new HttpHeaders().set("Authorization", this.authToken);
     return this.http.get(this.apiUrl+endPoint,{headers:header});
   }
 
   postData(endPoint:any, data: any): Observable<any> {
-    console.log("postData");
-    console.log(this.apiUrl+endPoint);
-    console.log(this.authToken);
     let header = new HttpHeaders().set("Authorization", this.authToken);
     return this.http.post<any>(this.apiUrl+endPoint, data, {headers:header});
   }

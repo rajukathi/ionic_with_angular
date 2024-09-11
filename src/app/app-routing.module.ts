@@ -7,12 +7,12 @@ import { AppComponent } from './app.component';
 const routes: Routes = [
   { 
     path: '', 
-    component: AppComponent
+    component: LoginFormComponent
   },
-  { 
-    path: 'home', 
-    component: AppComponent
-  },
+  /*{ 
+    path: '**', 
+    component: LoginFormComponent
+  },*/
   {
     path: 'login',
     component: LoginFormComponent
